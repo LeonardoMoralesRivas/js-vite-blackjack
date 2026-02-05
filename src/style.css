@@ -4,6 +4,9 @@ html, body {
     color: white;
 }
 
+:root {
+  --bs-body-bg: #2f4f2f; /* tu verde */
+}
 
 .titulo {
     text-align: center;
