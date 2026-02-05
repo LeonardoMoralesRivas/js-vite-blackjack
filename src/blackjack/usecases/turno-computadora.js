@@ -1,5 +1,5 @@
 import { crearCartaHTML, pedirCarta, valorCarta } from './';
-
+import Swal from 'sweetalert2';
 /**
  * 
  * @param {Number} puntosMinimos Puntos minimos que la computadora necesita para ganar.
@@ -33,13 +33,33 @@ export const turnoComputadora = ( puntosMinimos,puntosHTML,divCartasComputadora,
 
     setTimeout(() => {
         if( puntosComputadora === puntosMinimos ) {
-            alert('Nadie gana :(');
+            Swal.fire({
+                title: 'Empate',
+                text: 'Nadie gana',
+                icon: 'question',
+                theme: 'dark'
+            })
         } else if ( puntosMinimos > 21 ) {
-            alert('Computadora gana')
+            Swal.fire({
+            title: 'CPU Gana',
+            text: 'menso',
+            icon: 'error',
+            theme: 'dark'
+            });
         } else if( puntosComputadora > 21 ) {
-            alert('Jugador Gana');
+            Swal.fire({
+                title: 'Ganaste',
+                text: 'eres pro',
+                icon: 'success',
+                theme: 'dark'
+            })
         } else {
-            alert('Computadora Gana')
+            Swal.fire({
+            title: 'CPU Gana',
+            text: 'menso',
+            icon: 'error',
+            theme: 'dark'
+            });
         }
     }, 100 );
 }
