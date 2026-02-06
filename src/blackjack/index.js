@@ -81,6 +81,7 @@ btnNuevo.addEventListener('click', () => {
     puntosComputadora = 0;
     
     puntosHTML[0].innerText = 0;
+    puntosHTML[1].innerHTML = 0;
 
     divCartasComputadora.innerHTML = '';
     divCartasJugador.innerHTML = '';
